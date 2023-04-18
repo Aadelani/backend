@@ -9,12 +9,11 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from django.contrib.auth.hashers import make_password
+from coinbase_commerce import Client    
 from .models import User
-from .serializers import *
-from coinbase_commerce import Client      
-from twilio.base.exceptions import TwilioRestException
-import pyotp
+from .serializers import *  
 from .models import Payment
+
 
 from django.conf import settings
 from django.core.mail import send_mail
